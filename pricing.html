@@ -136,150 +136,16 @@ pageTracker._trackPageview();
 
 <tr>
 <td width="55%" valign="top" style="border: 1px solid #0F3A7F; padding-right: 27" colspan="2">
-<b><font class="default">&nbsp Email Us</font></b></td>
+<b><font class="default">&nbsp Contact Us</font></b></td>
 </tr>
 
 <tr>
 <td  align="left" class="default">
-<?php
-
-/*********************************************************************************
-* This script was created by Melody Mayberry.                                    *
-* http://www.melbell.com                                                         *
-*                                                                                *
-* Feel free to edit the script as you see fit but PLEASE leave this comment in.  *
-* You are welcome to add your own line to the comment showing the changes you    *
-* have made.                                                                     *
-*                                                                                *
-* Feel free to email me and let me know if you are using, I'd like to see my     *
-* script in action on someone else's site! :) You can find my contact            *
-* information at the website above!                                              *
-*                                                                                *
-*********************************************************************************/
-
-
-// DO NOT MESS WITH THESE TWO LINES
-$subject_array = array();
-//$recipient_array = array();
-///////////////////////////////////
-
-$this_script = "pricing.php"; // The name of THIS file, if you change it.
-
-// Edit only what's between the quotation marks in the below lines.
-// These will be the subjects that your users can choose from
-// You can have as many as you want.
-// Each one must be set up like so:
-// $subject_array[] = "What You Want This Choice To Be";
-// Make sure to remove empty ones that you aren't using. Just delete the entire line.
-$subject_array[] = "Residential";
-$subject_array[] = "Commercial";
-$subject_array[] = "Safety";
-$subject_array[] = "Specialized";
-
-// Edit only what's between the quotation marks in the below lines.
-// These lines contain the various people that can be contacted via your form.
-// You can have as many as you want.
-// Each one must be set up like so:
-// $recipient_array["UNIQUE Short Name"] = "email@email.com";
-// The "UNIQUE Short Name" will be shown in the select box.
-// This allows the actual email address to be hidden from the user.
-// Make sure to remove empty ones that you aren't using. Just delete the entire line.
-//$recipient_array["Your Email"] = "sc@imalm.com";
-$recipient_array["Creator of this Script"] = "Melbell@melbell.com";
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-// Do Not Edit Below Here Unless You Know What You Are Doing
-////////////////////////////////////////////////////////////////////////////////////
-if ($_POST["send"] == "true") {
-    $to = "bud@solarsolutions-ia.com";
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $address = $_POST["address"];
-    $city = $_POST["city"];
-    $state = $_POST["state"];
-    $zip = $_POST["zip"];
-    $the_subject = $_POST["subject"];
-    $message = $_POST["message"];
-    if (($name == "")) 
-    {
-	print ("<div id=\"default\">");
-	print ("<font color=\"red\">The name field was left blank. Please type your name in the name field.</font><br><br>");
-	print ("</div><br>");
-	email_form("",$email,$message, $the_subject, $phone, $address, $city, $state, $zip);
-	} 
-	elseif (($email == "")) 
-	{
-	print ("<div id=\"sectionContent\">");
-	print ("<font color=\"red\">The email field was left blank. Please type your email in the email field.</font><br><br>");
-	print ("</div><br>");
-	email_form($name,"",$message, $the_subject, $phone, $address, $city, $state, $zip);
-	}
-	elseif (($phone == "")) 
-	{
-	print ("<div id=\"sectionContent\">");
-	print ("<font color=\"red\">The phone number field was left blank. Please type your phone number in the phone number field.</font><br><br>");
-	print ("</div><br>");
-	email_form($name,$email,$message,$the_subject, "", $address, $city, $state, $zip);
-	} 
-	elseif(($message == ""))
-	{
-	print ("<div id=\"sectionContent\">");
-	print ("<font color=\"red\">The message field was left blank. Please type your message in the message field.</font><br><br>");
-	print ("</div><br>");
-	email_form($name,$email,"", $the_subject,$phone, $address, $city, $state, $zip);
-    }
-    elseif(ereg("[0-9]{3}\-?[0-9]{3}\-?[0-9]{4}", $phone) == FALSE )
-	{
-	print ("<div id=\"sectionContent\">");
-	print ("<font color=\"red\">The phone number is not in the right form. 515-555-1234 or 5155551234</font><br><br>");
-	print ("</div><br>");
-	email_form($name,$email,$message,$the_subject,"", $address, $city, $state, $zip);
-	}
-    elseif (ereg("([[:alnum:]\.\-]+)(\@[[:alnum:]\.\-]+\.+)", $email)) 
-    {
-	$recipient = $to;
-	$subject = "WEB INQUIRY: ".$the_subject;
-	$additional_headers = ("From: $email\n");
-	$body = ("Name: $name\nEmail: $email\nPhone: $phone\nAddress: $address\nCity: $city\nState: $state\nZip: $zip\nMessage:\n\n" . $message);
-	
-	if (mail($recipient, $subject, $body, $additional_headers)) 
-	{
-	    print ("<div id=\"sectionContent\">");
-	    print ("The Mail was sent successfully to Solar Solutions.<br><br><a href=\"\">click here</a> to return to the homepage<br><br>");
-	    print ("</div><br>");
-	} 
-	else 
-	{
-	    print ("<div id=\"sectionContent\">");
-	    print ("<font color=\"red\">Uh-Oh! Something went wrong with the script! Please try again.</font><br><br>");
-	    print ("</div><br>");
-	    $send = "false";
-	    email_form($name,$email,$message,$the_subject, $phone, $address, $city, $state, $zip);
-	}
-	
-    } 
-    else 
-    {
-	print ("<div id=\"sectionContent\">");
-	print ("<font color=\"red\">That email address does not appear to be valid. Please try again.</font><br><br>");
-	print ("</div><br>");
-	$send = "false";
-	email_form($name,"",$message,$the_subject, $phone, $address, $city, $state, $zip); 
-	} 
-} 
-else 
-{
-    print ("<div id=\"default\">");
-    print ("<br>Pricing is done on a job by job basis, so no specific quotes are given online.<br><br>");
-    print ("<br>Please fill out the form below with details about what you are insterested in and we will respond to your request as soon as possible.<br><br>");
-    print ("</div><br>");
-    email_form("","","","","","","","","");
-}
-?>
-
+<br><br>Please contact us for pricing.<br>
+<br>Contact Information:<br>
+<br><b>Bud Woods</b>, Owner
+<br>Phone: (515) 277-TINT(8468)
+<br>email: bud (at) solarsolutions-ia (.) com
 </td>
 </tr>
 <tr><td bgcolor="white"><IMG height="20" src="images/b.gif" width="1" alt="."></td></tr>
