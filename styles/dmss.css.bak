@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, Helvetica, Sans-Serif;
+	background-color: #EFEFEF;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+}
+
+#font,th,td,p 		{ font-family: Arial, Helvetica, sans-serif }
+
+.default 			{ font-family: Arial, Helvetica, Sans-Serif; font-size: 10pt; color: #0F3A7F }
+.small 				{ font-size: 8pt; color: black }
+.header				{ font-family: Arial, Helvetica, Sans-Serif; color: black; font-weight:bold; }
+.divider			{ font-family: Arial, Helvetica, Sans-Serif; background-color: #0F3A7F; font-weight:bold; }
+.date 				{ font-family: Arial, Helvetica, Sans-Serif; font-size: -2pt; color: #efefef }
+
+tr.default			{ }
+tr.default td		{ font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #0F3A7F solid; }
+
+a:link 				{ color: #666666; text-decoration: none; }
+a:visited   		{ color: #666666; text-decoration: none; }
+A:active			{ color: #000000; text-decoration: none }
+A:hover				{ color: #000000; text-decoration: none }
+A.search:link       { color: #666666; text-decoration: underline }
+a.search:visited    { color:#666666; text-decoration: underline }
+
+div.mainheader 		{ font-family:Verdana,Arial,sans-serif; font-size:12pt; color:black; text-align:left; font-weight:bold; }
+div.maintext 		{ font-family:Verdana,Arial,sans-serif; font-size:10pt; text-align:justify; }
+div.mainleft 		{ font-family:Verdana,Arial,sans-serif; font-size:10pt; text-align:left; }
+div.mainmenu 		{ font-family:Verdana,Arial,sans-serif; font-size:8pt; text-align:right; }
+div.mainpages 		{ font-family:Verdana,Arial,sans-serif; font-size:7pt; text-align:right; margin-right:0px; }
+div.maincatnav 		{ font-family:Verdana,Arial,sans-serif; font-size:7pt; text-align:left; margin-left:0px; }
+div.mainname 		{ font-family:Verdana,Arial,sans-serif; font-size:10pt; color:black; text-align:left; font-weight:bold;}
+div.maininputleft 	{ font-family:Verdana,Arial,sans-serif; font-size:10pt; text-align:left; }
+div.comment 		{ font-family:Verdana,Arial,sans-serif; font-size:10pt; background: #E8E8E8; text-align:left; margin-left:5mm; }
+div.xsmallleft 		{ font-family:Verdana,Arial,sans-serif; font-size:7pt; text-align:left; }
+div.smallleft 		{ font-family:Verdana,Arial,sans-serif; font-size:8pt; text-align:left; }
+div.spaceleft 		{ font-family:Verdana,Arial,sans-serif; font-size:4pt; text-align:left; }
+div.footer 			{ font-family:Verdana,Arial,sans-serif; font-size:7pt; text-align:center; }
+
+div.normal			{ font-family: Arial, Helvetica, sans-serif; font-size:13px; }
+
+span.censored 		{ font-family:Verdana,Arial,sans-serif; font-size:10pt; color:#FF0000; text-align:left; }
+
+# Guestbook
+td.class1 			{ border:0px; }
+td.class2 			{ border:0px; text-align:justify; vertical-align:top; }
+td.gbheader 		{ background-color: #C9C9C9; border:0px; font-size:10pt; font-weight:bold; text-align:center;}
+td.gbtable1 		{ background-color: #DDDDDD; border:0px; vertical-align:top; width:20%; }
+td.gbtable2 		{ background-color: #EEEEEE; border:0px; vertical-align:top; }
+
+td.normal			{ font-family: Arial, Helvetica, sans-serif; font-size:13px; }
+td.small			{ font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+tr.small			{ }
+tr.small td			{ font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+
+# Knowledge Base
+tr.kb				{ }
+tr.kb td			{ font-family: Arial, Helvetica, sans-serif; font-size:12px; }
+td.kbheader			{ font-family: Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; }
+
+.smartftp 			{ font-family: Arial, Helvetica, sans-serif; font-size: small; }
+
+# Form
+form {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+input {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+input.flat {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #000000;
+}
+
+textarea {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #000000;
+}
+
+select {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #000000;
+}
+
+# purchase table
+.colortier1 		{ background-color: #f8f8f8 }
+.colortier2 		{ background-color: #e8e8e8 }
+.colortier3 		{ background-color: #d8d8d8 }
+.colortierheader1 	{ background-color: #f0f0f0 }
+.colortierheader2 	{ background-color: #e0e0e0 }
+.colortierheader3 	{ background-color: #d0d0d0 }
