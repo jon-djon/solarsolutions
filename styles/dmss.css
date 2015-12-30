@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, Sans-Serif;
+	background-color: #EFEFEF;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+}
+
+
+.default 			{ font-family: Arial, Helvetica, Sans-Serif; font-size: 10pt; color: #0F3A7F }
+.defaultWhite 			{ font-family: Arial, Helvetica, Sans-Serif; font-size: 10pt; color: white }
+.divider			{ font-family: Arial, Helvetica, Sans-Serif; background-color: #0F3A7F; font-weight:bold; }
+.date 				{ font-family: Arial, Helvetica, Sans-Serif; font-size: -2pt; color: #efefef }
+
+
+
+/* This is the border line & background colour round the entire page */
+.bodyline	{ background-color: #FFFFFF; border: 1px #0F3A7F solid; }
+
+a:link 				{ color: #666666; text-decoration: none; }
+a:visited   		{ color: #666666; text-decoration: none; }
+A:active			{ color: #000000; text-decoration: none }
+A:hover				{ color: #000000; text-decoration: none }
+A.search:link       { color: #666666; text-decoration: underline }
+a.search:visited    { color:#666666; text-decoration: underline }
+
+
+
+# Form
+form {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+input {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+textarea {
+	color : #000000;
+ 	background-color: #FFFFFF;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #000000;
+}
+
+
+
